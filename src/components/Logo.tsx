@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <div className="transition-all capitalize text-4xl pointer-events-none scale-75 md:scale-100">
+    <div className="font-logo! transition-all capitalize text-4xl font-normal! pointer-events-none scale-75 md:scale-100">
         <p className='[&>span]:inline-block [&>span]:lowercase'>
             no
             <span className='rotate-45 translate-x-1.5 -translate-y-3'>t</span>

@@ -6,5 +6,18 @@ import svgr from 'vite-plugin-svgr'
 // https://vite.dev/config/
 export default defineConfig({
   base: "/note/",
-  plugins: [react(), tailwindcss(), svgr()],
+  plugins: [
+    react(), 
+    tailwindcss(), 
+    svgr(),
+    {
+      name: "markdown-loader",
+      transform(code, id) {
+        if (id.slice(-3) === ".md") {
+          // For .md files, get the raw content
+          return `export default ${JSON.stringify(code)};`;
+        }
+      }
+    }
+  ],
 })

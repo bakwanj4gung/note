@@ -59,5 +59,6 @@ h1, h2, h3, h4 { @apply font-semibold; }
 .content ol ol ol ol ol { @apply list-[lower-alpha]; }
 
 .content blockquote { @apply border-r-4 text-sky-600 py-0.5 ps-2 bg-sky-100 w-fit px-4 text-base dark:text-sky-100 dark:bg-sky-800; }
+.content blockquote p { @apply block!; }
 
 .content a { @apply underline text-blue-400 hover:text-blue-600! decoration-2 underline-offset-2; }

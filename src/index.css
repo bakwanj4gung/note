@@ -30,6 +30,8 @@
 
 .content hr { @apply mt-8; }
 
+.content strong { @apply font-semibold!; }
+
 h1, h2, h3, h4 { @apply font-semibold; }
 
 .content { @apply text-lg space-y-4; }

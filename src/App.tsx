@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import Markdown from 'react-markdown'
 import markdown from './pages/EXAMPLE.md';
-import rehypeRaw from "rehype-raw";
+import remarkIns from 'remark-ins';
 
 function App() {
 	return (
@@ -10,7 +10,7 @@ function App() {
 				<Navbar />
 				<main className="py-4 space-y-8">
 					<div dir="rtl" className="content">
-						<Markdown rehypePlugins={[rehypeRaw]}>
+						<Markdown remarkPlugins={[remarkIns]}>
 							{markdown}
 						</Markdown>
 					</div>

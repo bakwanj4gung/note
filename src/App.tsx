@@ -3,6 +3,33 @@ import Markdown from 'react-markdown'
 import markdown from './pages/EXAMPLE.md';
 import remarkIns from 'remark-ins';
 
+export default function App() {
+	return (
+		<div className="size-full min-h-screen px-8 md:px-16 lg:px-32 xl:px-48">
+			<div className="size-full min-h-screen p-2 text-dark dark:text-light font-noto transition-color">
+				<Navbar />
+				<main className="py-4 space-y-8">
+					<div dir="rtl" className="content">
+						<Markdown 
+							remarkPlugins={[remarkIns]}
+							components={{ blockquote({ children }) {
+								const type = blockquoteType(children);
+								const sanitizedChildren = sanitizeBlockquote(children);
+								return (
+									<blockquote className={`blockquote-${type}`}>{sanitizedChildren}</blockquote>
+								)
+							}}}
+						>
+							{markdown}
+						</Markdown>
+					</div>
+				</main>
+			</div>
+		</div>
+	)
+}
+
+
 function blockquoteType(children: any) {
 	try {
 		const objectChild = children?.[1];
@@ -40,31 +67,3 @@ function sanitizeBlockquote(children: any) {
 		return children;
 	}
 }
-
-function App() {
-	return (
-		<div className="size-full min-h-screen px-8 md:px-16 lg:px-32 xl:px-48">
-			<div className="size-full min-h-screen p-2 text-dark dark:text-light font-noto transition-color">
-				<Navbar />
-				<main className="py-4 space-y-8">
-					<div dir="rtl" className="content">
-						<Markdown 
-							remarkPlugins={[remarkIns]}
-							components={{ blockquote({ children }) {
-								const type = blockquoteType(children);
-								const sanitizedChildren = sanitizeBlockquote(children);
-								return (
-									<blockquote className={`blockquote-${type}`}>{sanitizedChildren}</blockquote>
-								)
-							}}}
-						>
-							{markdown}
-						</Markdown>
-					</div>
-				</main>
-			</div>
-		</div>
-	)
-}
-
-export default App

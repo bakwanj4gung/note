@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import MarkdownPageRender from "./md-setup/MarkdownPageRender";
 import Layout from "./components/Layout";
 
 export default function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route element={<Layout />} >
 					<Route path="/note/" element={<MarkdownPageRender />} />
@@ -12,6 +12,6 @@ export default function App() {
 					<Route path="/note/:direction/:slug" element={<MarkdownPageRender />} />
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }

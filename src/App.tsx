@@ -1,17 +1,17 @@
-import { HashRouter, Route, Routes } from "react-router";
+import { HashRouter as Router, Route, Routes } from "react-router";
 import MarkdownPageRender from "./md-setup/MarkdownPageRender";
 import Layout from "./components/Layout";
 
 export default function App() {
 	return (
-		<HashRouter>
+		<Router>
 			<Routes>
 				<Route element={<Layout />} >
-					<Route path="/note/" element={<MarkdownPageRender />} />
-					<Route path="/note/:slug" element={<MarkdownPageRender />} />
-					<Route path="/note/:direction/:slug" element={<MarkdownPageRender />} />
+					<Route path="/" element={<MarkdownPageRender />} />
+					<Route path=":slug" element={<MarkdownPageRender />} />
+					<Route path=":direction/:slug" element={<MarkdownPageRender />} />
 				</Route>
 			</Routes>
-		</HashRouter>
+		</Router>
 	)
 }

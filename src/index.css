@@ -60,7 +60,7 @@ h1, h2, h3, h4 { @apply font-semibold; }
 
 .content a { @apply underline text-blue-400 hover:text-blue-600! decoration-2 underline-offset-2; }
 
-.content blockquote { @apply border-r-4 py-0.5 ps-2 }
+.content blockquote { @apply border-r-4 py-0.5 ps-2 pe-4 w-fit }
 .content blockquote p { @apply block!; }
 .content .blockquote-default, .content .blockquote-info { @apply text-sky-600 bg-sky-100 dark:text-sky-100 dark:bg-sky-800; }
 .content .blockquote-important { @apply text-red-600 bg-red-100 dark:text-red-100 dark:bg-red-800; }

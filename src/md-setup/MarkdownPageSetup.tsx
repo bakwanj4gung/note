@@ -41,7 +41,6 @@ function sanitizeBlockquote(children: any) {
 		const objectChild = children?.[1];
 		const text = objectChild?.props?.children?.[0];
 		const removeText = /\[IMPORTANT\]|\[INFO\]|\[WARNING\]|\[OK\]/;
-		console.log(objectChild?.props?.children);
 		if (typeof text === "string" && removeText.test(text)) {
 			const newChildren = objectChild.props.children.slice(3);
 			const newChild = {

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import MarkdownPageSetup from "./MarkdownPageSetup";
 import { useParams } from "react-router";
 

@@ -1,6 +1,7 @@
 # الفقه (1)
 
 ---
+++[home](https://bakwanj4gung.github.io/note)++ 
 
 ## 1. الطهارة
 

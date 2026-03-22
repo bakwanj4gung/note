@@ -35,6 +35,7 @@
 h1, h2, h3, h4 { @apply font-semibold; }
 
 .content { @apply text-lg space-y-4; }
+.content > p:has(+ ul), .content > p:has(+ ol) { margin-block-end: 0px; }
 
 .content h2, .content h3, .content h4 { @apply mt-8; }
 .content h1 { @apply mb-8 text-center text-5xl md:text-6xl; }
@@ -42,7 +43,7 @@ h1, h2, h3, h4 { @apply font-semibold; }
 .content h3 { @apply text-2xl md:text-3xl; }
 .content h4 { @apply text-xl md:text-2xl; }
 
-.content ul, .content ol { @apply list-outside ps-6 space-y-1 my-2; }
+.content ul, .content ol { @apply list-outside ps-6 space-y-1 ; }
 .content li > ul, .content li > ol { @apply mt-1 mb-0; }
 .content li p { @apply inline; }
 

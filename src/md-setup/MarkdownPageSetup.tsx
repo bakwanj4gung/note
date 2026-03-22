@@ -1,12 +1,13 @@
 import Markdown from 'react-markdown';
 import remarkIns from 'remark-ins';
+import remarkGfm from 'remark-gfm';
 
 
 export default function MarkdownPageSetup({ content, rtl = false }: { content: string, rtl?: boolean }) {
     return (
 		<div className='content' dir={rtl ? "rtl" : "ltr"}>
 			<Markdown 
-				remarkPlugins={[remarkIns]}
+				remarkPlugins={[remarkIns, remarkGfm]}
 				components={{ blockquote({ children }) {
 					const type = blockquoteType(children);
 					const sanitizedChildren = sanitizeBlockquote(children);

@@ -67,3 +67,8 @@ h1, h2, h3, h4 { @apply font-semibold; }
 .content .blockquote-important { @apply text-red-600 bg-red-100 dark:text-red-100 dark:bg-red-800; }
 .content .blockquote-warning { @apply text-yellow-600 bg-yellow-100 dark:text-yellow-100 dark:bg-yellow-800; }
 .content .blockquote-ok { @apply text-emerald-600 bg-emerald-100 dark:text-emerald-100 dark:bg-emerald-800; }
+
+.content table { @apply **:border divide-y-2; }
+.content table thead { @apply ltr:text-left rtl:text-right font-medium; }
+.content table tbody { @apply divide-y; }
+.content table th, .content table td { @apply whitespace-nowrap px-3 py-0.5; }
